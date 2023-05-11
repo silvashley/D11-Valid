@@ -8,17 +8,43 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
                 function clearscrn() {
-                //check for lowercase & if yes display green
-                  var lowerCaseLetters = /[a-z]/g;
-  if(document.getElementById("psw").value.match(lowerCaseLetters)) {  
-                    document.getElementById('uc').style.color='yellow';               
+                
+                    //check for lowercase & if yes display green
 
-  } 
-                //check for lowercase &  if yes display green
-                document.getElementById('lc').style.color='green';  
+                var lowerCaseLetters = /[a-z]/g;
+                    if(document.getElementById("psw").value.match(lowerCaseLetters)) {  
+                                        document.getElementById('lc').style.color='green';               
+
+                    } 
+
+
+                //check for uppercase &  if yes display green
+
+                var UpperCaseLetters = /[A-Z]/g;
+                    if(document.getElementById("psw").value.match(UpperCaseLetters)) {  
+                                        document.getElementById('uc').style.color='green';               
+
+                    } 
+                document.getElementById('uc').style.color='green';  
+                
                 //check for number & if yes display green
-                document.getElementById('num').style.color='green';  
-                //check for letter & if yes display green         
+
+                var Number = /[1-9]/g;
+                    if(document.getElementById("psw").value.match(Number)) {  
+                                        document.getElementById('num').style.color='green';               
+
+                    } 
+
+                document.getElementById('psw').style.color='green';  
+               
+                //check for length & if yes display green         
+
+                var Length = /[abcde]/g;
+                    if(document.getElementById("psw").value.match(length)) {  
+                                        document.getElementById('length').style.color='green';               
+
+                    } 
+
                 document.getElementById('length').style.color='green';  
                 }        
     </script>
